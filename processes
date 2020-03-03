@@ -1,0 +1,49 @@
+#n1_n1
+generate p p > n1 n1 /su1 h01 h02 a0 h-, n1 > j j j, n1 > j j j 
+add process p p > n1 n1 j /su1 h01 h02 a0 h-, n1 > j j j, n1 > j j j
+
+#n1_x1
+generate p p > x1- n1 /su1 h01 h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j), n1 > j j j
+add process p p > x1+ n1 /su1 h01 h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j), n1 > j j j
+add process p p > x1- n1 j /su1 h01 h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j), n1 > j j j 
+add process p p > x1+ n1 j /su1 h01 h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j), n1 > j j j
+
+#x1_x1
+generate p p > x1- x1+ /su1 h01 h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j), (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1- x1+ j /su1 h01 h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j), (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+
+#x1_n2
+generate p p > x1- n2 /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-,  (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j), (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-,  (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j), (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 j /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-,  (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 j /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j), (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 j /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-,  (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 j /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j), (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+
+#n1_n2
+generate p p > n1 n2 /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), n1 > j j j
+add process p p > n1 n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), n1 > j j j
+add process p p > n1 n2 /su1 h01 h02 a0 h-, (n2 > n1 j j /h02 a0 h-, n1 > j j j), n1 > j j j
+add process p p > n1 n1 j /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), n1 > j j j
+add process p p > n1 n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), n1 > j j j
+add process p p > n1 n2 j /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j), n1 > j j j
+
+#n2_n2
+generate p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)) 
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1+ allSM allSM /h02 a0 h-,  (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j)
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j)
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j), (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)) 
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1+ allSM allSM /h02 a0 h-,  (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j)
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j)
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j), (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j)

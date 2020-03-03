@@ -1,0 +1,21 @@
+import model RPVMSSM_UFO-iftah --modelname
+define allSM = g u c d s b u~ c~ d~ s~ b~ e+ mu+ tau+ ve~ vm~ vt~ e- mu- tau- ve vm vt a
+generate p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1+ allSM allSM /h02 a0 h-,  (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j)
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j)
+add process p p > n2 n2 /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j), (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1- allSM allSM /h02 a0 h-,  (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > x1+ allSM allSM /h02 a0 h-,  (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j))
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j)
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), (n2 > n1 allSM allSM /h02 a0 h-,  n1 > j j j)
+add process p p > n2 n2 j /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j), (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j)
+output n2_n2-150-200-zxdf
+launch -m
+set nevents 100000
+set Mneu1 150
+set Mch1 200
+set Mneu2 zxdf
+done

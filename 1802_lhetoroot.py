@@ -1,3 +1,4 @@
+#usage: python 1802_lhetoroot.py inputlhefilename.lhe
 from ROOT import *
 from array import array
 import sys
