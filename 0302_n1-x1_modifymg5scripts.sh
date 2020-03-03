@@ -18,14 +18,3 @@ sed -i "s/1 yyyy/1 $2/g" $n1_n1 $n1_x1 $x1_x1 $x1_n2 $n1_n2 $n2_n2
 sed -i "s/2 zzzz/2 $3/g" $n1_n1 $n1_x1 $x1_x1 $x1_n2 $n1_n2 $n2_n2
 
 ../bin/mg5_aMC n1_x1.mg5 
-
-cat $n1_x1
-
-sed -i "s/-$1/-xxxx/g" $n1_n1 $n1_x1 $x1_x1 $x1_n2 $n1_n2 $n2_n2
-sed -i "s/-$2/-yyyy/g" $n1_n1 $n1_x1 $x1_x1 $x1_n2 $n1_n2 $n2_n2
-sed -i "s/-$3/-zzzz/g" $n1_n1 $n1_x1 $x1_x1 $x1_n2 $n1_n2 $n2_n2
-sed -i "s/1 $1/1 xxxx/g" $n1_n1 $n1_x1 $x1_x1 $x1_n2 $n1_n2 $n2_n2
-sed -i "s/1 $2/1 yyyy/g" $n1_n1 $n1_x1 $x1_x1 $x1_n2 $n1_n2 $n2_n2
-sed -i "s/2 $3/2 zzzz/g" $n1_n1 $n1_x1 $x1_x1 $x1_n2 $n1_n2 $n2_n2
-
-cat $n1_x1

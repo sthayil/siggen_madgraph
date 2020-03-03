@@ -6,10 +6,10 @@ add process p p > n1 n2 /su1 h01 h02 a0 h-, (n2 > n1 j j /h02 a0 h-, n1 > j j j)
 add process p p > n1 n1 j /su1 h01 h02 a0 h-, (n2 > x1- allSM allSM /h02 a0 h-, (x1- > n1 allSM allSM /h02 a0 h-, n1 > j j j)), n1 > j j j
 add process p p > n1 n2 j /su1 h01 h02 a0 h-, (n2 > x1+ allSM allSM /h02 a0 h-, (x1+ > n1 allSM allSM /h02 a0 h-, n1 > j j j)), n1 > j j j
 add process p p > n1 n2 j /su1 h01 h02 a0 h-, (n2 > n1 allSM allSM /h02 a0 h-, n1 > j j j), n1 > j j j
-output n1_n2-150-200-zxdf
+output n1_n2-xxxx-yyyy-zzzz
 launch -m
 set nevents 100000
-set Mneu1 150
-set Mch1 200
-set Mneu2 zxdf
+set Mneu1 xxxx
+set Mch1 yyyy
+set Mneu2 zzzz
 done
