@@ -7,4 +7,5 @@ launch -m
 set nevents 100000
 set Mneu1 xxxx
 set Mch1 yyyy
+compute_widths n1 n2 x1+ --body_decay=3 --output=events_x1_x1-xxxx-yyyy/Cards/param_card.dat
 done
