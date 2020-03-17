@@ -161,8 +161,8 @@ print "Num events with tau: ", tauev
 print "\nNum events with HT>1050: ", ht1050
 print "Num events with HT>1050, lep: ", ht1050lep
 print "Num events with HT>450, lep pT>20:", ht450lep20
-print "Num events with HT>1050, lep: ", ht450lep
-print "\nNum events with HT>1050: ", ht450
+print "Num events with HT>450, lep: ", ht450lep
+print "Num events with HT>450: ", ht450
 
 out_file.cd()
 out_file.Write()
