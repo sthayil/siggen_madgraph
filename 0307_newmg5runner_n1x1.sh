@@ -15,4 +15,4 @@ sed -i "s/1 yyyy/1 $2/g" $n1_x1
 
 gunzip events_n1_x1-$1-$2/Events/run01/unweighed_events.lhe.gz
 
-python 0306_checklhebranchingratio.py events_n1_x1-$1-$2/Events/run01/unweighed_events.lhe
+python 0306_checklhebranchingratio.py events_n1_x1-$1-$2/Events/run_01/unweighted_events.lhe

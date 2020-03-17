@@ -68,14 +68,22 @@ hist_numjets     = TH1F('hist_numjets','numjets',20,0,20)
 hist_leptonpt       = TH1F('hist_leptonpt','leptonpt',30,0,300)
 hist_jetpt          = TH1F('hist_jetpt','jetpt',100,0,1000)
 hist_eventht        = TH1F('hist_eventht','eventht',300,0,3000)
-hist_leptoniso   = TH1F('hist_leptoniso','leptoniso_deltar',150,0,15)
+hist_leptoniso   = TH1F('hist_leptoniso','leptoniso',150,0,15)
 
 stableparts=[]
 count=0
+
 lepev=0
 elev=0
 muev=0
 tauev=0
+
+ht1050=0
+ht450lep20=0
+ht1050lep=0
+ht450lep=0
+ht450=0
+
 for particles in eventparticles: #particles is always an array of 'particles'; particles[i].XXXX accesses members. for each event:
     numlep=0
     numtau=0
@@ -86,20 +94,22 @@ for particles in eventparticles: #particles is always an array of 'particles'; p
     hasel=0
     hasmu=0
     hastau=0
-
+    haslep20=0
+    
     for i in range(len(particles)):
         if particles[i].status == 1: #if stable
             stableparts.append(particles[i].pdgid)
             #pdgid,status,mother1,mother2,p4,mass,ctau,spin
 
             if abs(particles[i].pdgid) in visible:
-                visE+=(particles[i].p4.Pt())
-
                 if abs(particles[i].pdgid) in leptons: 
                     numlep+=1
                     hist_leptonpt.Fill(particles[i].p4.Pt())
                     haslep=1
 
+                    if particles[i].p4.Pt()>20:
+                        haslep20=1
+                        
                     conept=0
                     isolation=0
                     for j in range(len(particles)):
@@ -108,7 +118,6 @@ for particles in eventparticles: #particles is always an array of 'particles'; p
                             if deltar < 0.3 and deltar > 0:
                                 conept+=particles[j].p4.Pt()
                     isolation = conept / particles[i].p4.Pt()
-#                    print isolation, 
                     hist_leptoniso.Fill(isolation)
 
                 if abs(particles[i].pdgid) == 15 : 
@@ -121,6 +130,7 @@ for particles in eventparticles: #particles is always an array of 'particles'; p
                 if abs(particles[i].pdgid) in quarks: 
                     numq+=1
                     hist_jetpt.Fill(particles[i].p4.Pt())
+                    visE+=(particles[i].p4.Pt())
 
     hist_numleptons.Fill(numlep)
     hist_numtau.Fill(numtau)
@@ -132,6 +142,12 @@ for particles in eventparticles: #particles is always an array of 'particles'; p
     if hasmu==1: muev+=1
     if hastau==1: tauev+=1
     
+    if (visE>1050): ht1050+=1
+    if (visE>450 and haslep20==1): ht450lep20+=1
+    if (visE>1050 and haslep==1): ht1050lep+=1
+    if (visE>450 and haslep==1): ht450lep+=1
+    if (visE>450): ht450+=1
+
     stableparts=list(set(stableparts))    
     count+=1
 
@@ -142,6 +158,11 @@ print "Num events with leptons: ", lepev
 print "Num events with el: ", elev
 print "Num events with mu: ", muev
 print "Num events with tau: ", tauev
+print "\nNum events with HT>1050: ", ht1050
+print "Num events with HT>1050, lep: ", ht1050lep
+print "Num events with HT>450, lep pT>20:", ht450lep20
+print "Num events with HT>1050, lep: ", ht450lep
+print "\nNum events with HT>1050: ", ht450
 
 out_file.cd()
 out_file.Write()
