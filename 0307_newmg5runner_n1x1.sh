@@ -13,6 +13,6 @@ sed -i "s/1 yyyy/1 $2/g" $n1_x1
 
 ../bin/mg5_aMC n1_x1_$1_$2.mg5 
 
-gunzip events_n1_x1-$1-$2/Events/run01/unweighed_events.lhe.gz
+gunzip events_n1_x1-$1-$2/Events/run_01/unweighted_events.lhe.gz
 
 python 0306_checklhebranchingratio.py events_n1_x1-$1-$2/Events/run_01/unweighted_events.lhe
