@@ -2,7 +2,7 @@ import model RPVMSSM_UFO-iftah --modelname
 define allSM = g u c d s b u~ c~ d~ s~ b~ e+ mu+ tau+ ve~ vm~ vt~ e- mu- tau- ve vm vt a
 generate p p > n1 n1 /su1 h01 h02 a0 h-, n1 > j j j, n1 > j j j
 add process p p > n1 n1 j /su1 h01 h02 a0 h-, n1 > j j j, n1 > j j j
-output n1_n1-xxxx
+output events_n1_n1-xxxx
 launch -m
 set nevents 100000
 set Mneu1 xxxx
