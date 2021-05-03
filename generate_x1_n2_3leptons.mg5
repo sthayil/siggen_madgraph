@@ -1,0 +1,23 @@
+import model RPVMSSM_UFO-iftah --modelname
+define allSM = g u c d s b u~ c~ d~ s~ b~ e+ mu+ tau+ ve~ vm~ vt~ e- mu- tau- ve vm vt a
+define lep = l+ l- vl vl~ tau+ tau-
+define leptons = e+ mu+ tau+ e- mu- tau-
+define notlep = g u c d s u~ c~ d~ s~ a b b~
+
+generate p p > x1- n2 /su1 h01 h02 a0 h-, (n2 > x1- lep lep /h02 a0 h-,  (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)), (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 /su1 h01 h02 a0 h-, (n2 > x1+ lep lep /h02 a0 h-,  (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)), (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 /su1 h01 h02 a0 h-, (n2 > n1 leptons leptons /h02 a0 h-,  n1 > j j j), (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)
+
+add process p p > x1+ n2 /su1 h01 h02 a0 h-, (n2 > x1- lep lep /h02 a0 h-,  (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)), (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 /su1 h01 h02 a0 h-, (n2 > x1+ lep lep /h02 a0 h-,  (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)), (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 /su1 h01 h02 a0 h-, (n2 > n1 leptons leptons /h02 a0 h-,  n1 > j j j), (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)
+
+add process p p > x1- n2 j /su1 h01 h02 a0 h-, (n2 > x1- lep lep /h02 a0 h-,  (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)), (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 j /su1 h01 h02 a0 h-, (n2 > x1+ lep lep /h02 a0 h-,  (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)), (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)
+add process p p > x1- n2 j /su1 h01 h02 a0 h-, (n2 > n1 leptons leptons /h02 a0 h-,  n1 > j j j), (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)
+
+add process p p > x1+ n2 j /su1 h01 h02 a0 h-, (n2 > x1- lep lep /h02 a0 h-,  (x1- > n1 lep lep /h02 a0 h-, n1 > j j j)), (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 j /su1 h01 h02 a0 h-, (n2 > x1+ lep lep /h02 a0 h-,  (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)), (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)
+add process p p > x1+ n2 j /su1 h01 h02 a0 h-, (n2 > n1 leptons leptons /h02 a0 h-,  n1 > j j j), (x1+ > n1 lep lep /h02 a0 h-, n1 > j j j)
+
+output output_x1_n2_3leptons
