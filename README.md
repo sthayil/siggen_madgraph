@@ -13,7 +13,10 @@ tar -xvf models/RPVMSSM_UFO.tar.gz
 cp siggen_madgraph/restrict_iftah.dat models/RPVMSSM_UFO/
 ```
 
-To generate n1_x1 events with masses mn1 and mx1,
+To generate x1_n2 events with masses mn1, mx1, mn2:
 ```
-source 0307_newmg5runner_n1x1.sh mn1 mx1
+source 0909_mg5runner.sh x1_n2 mn1 mx1 mn2
 ```
+Process options: n1_n1, n1_x1, x1_x1, n1_n2, x1_n2, n2_n2
+
+If no x1 or n2, put a dummy value such as mmm for mx1, mn2
