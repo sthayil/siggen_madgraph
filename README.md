@@ -15,7 +15,7 @@ cp siggen_madgraph/restrict_iftah.dat models/RPVMSSM_UFO/
 
 To generate x1_n2 events, first do:
 ```
-../bin/mg5_aMC generate_x1_n2_twoorthreeleptons.mg5
+../bin/mg5_aMC generate_x1_n2_3leptons.mg5
 ```
 
 Then, to generate events with masses mn1, mx1, mn2, do:
