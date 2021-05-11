@@ -1,0 +1,10 @@
+launch output_x1_n2_simplifieddegenx1n2_3leptons -n xxxx-yyyy-zzzz
+#launch -m
+set nevents 100000
+set Mneu1 xxxx
+set Mch1 yyyy
+set Mneu2 zzzz
+
+compute_widths n1 n2 x1+ --body_decay=3 --output=output_x1_n2_simplifieddegenx1n2_3leptons/Cards/param_card.dat
+
+done
